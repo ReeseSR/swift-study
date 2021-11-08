@@ -5,3 +5,4 @@
 |---|---|---|
 |1주차|Intro to IOS-14 & Swift-5, XCODE Overview, Create UI|[✅](https://github.com/bsorinnn/swift-study/tree/main/Study/Week1)|
 |2주차|Reach Data from UI|[✅](https://github.com/bsorinnn/swift-study/tree/main/Study/Week2/Cryptocurrency%20Converter)|
+|3주차|Listing Data on IOS, Routing on IOS|[✅](https://github.com/bsorinnn/swift-study/tree/main/Study/Week3/Country%20List)|

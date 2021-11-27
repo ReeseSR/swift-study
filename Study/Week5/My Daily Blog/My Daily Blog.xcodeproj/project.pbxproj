@@ -15,7 +15,8 @@
 		83372A62273FF38C0015343B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83372A60273FF38C0015343B /* LaunchScreen.storyboard */; };
 		83372A6D273FF38C0015343B /* My_Daily_BlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83372A6C273FF38C0015343B /* My_Daily_BlogTests.swift */; };
 		83372A78273FF38C0015343B /* My_Daily_BlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83372A77273FF38C0015343B /* My_Daily_BlogUITests.swift */; };
-		83B6015627428539007CF345 /* BlogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6015527428539007CF345 /* BlogEntry.swift */; };
+		8384805127526CF9002137EA /* BlogEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384804F27526CF9002137EA /* BlogEntry+CoreDataClass.swift */; };
+		8384805227526CF9002137EA /* BlogEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384805027526CF9002137EA /* BlogEntry+CoreDataProperties.swift */; };
 		83B6015E274286DF007CF345 /* BlogEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6015D274286DF007CF345 /* BlogEntriesTableViewController.swift */; };
 		83B601632742876D007CF345 /* BlogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B601622742876C007CF345 /* BlogEntryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +53,8 @@
 		83372A73273FF38C0015343B /* My Daily BlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Daily BlogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83372A77273FF38C0015343B /* My_Daily_BlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Daily_BlogUITests.swift; sourceTree = "<group>"; };
 		83372A79273FF38C0015343B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83B6015527428539007CF345 /* BlogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntry.swift; sourceTree = "<group>"; };
+		8384804F27526CF9002137EA /* BlogEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8384805027526CF9002137EA /* BlogEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		83B6015D274286DF007CF345 /* BlogEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntriesTableViewController.swift; sourceTree = "<group>"; };
 		83B601622742876C007CF345 /* BlogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,8 @@
 		83372A46273FF38B0015343B = {
 			isa = PBXGroup;
 			children = (
+				8384804F27526CF9002137EA /* BlogEntry+CoreDataClass.swift */,
+				8384805027526CF9002137EA /* BlogEntry+CoreDataProperties.swift */,
 				83372A51273FF38B0015343B /* My Daily Blog */,
 				83372A6B273FF38C0015343B /* My Daily BlogTests */,
 				83372A76273FF38C0015343B /* My Daily BlogUITests */,
@@ -114,7 +118,6 @@
 				83372A60273FF38C0015343B /* LaunchScreen.storyboard */,
 				83372A63273FF38C0015343B /* Info.plist */,
 				83372A5B273FF38B0015343B /* My_Daily_Blog.xcdatamodeld */,
-				83B6015527428539007CF345 /* BlogEntry.swift */,
 			);
 			path = "My Daily Blog";
 			sourceTree = "<group>";
@@ -267,8 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B6015627428539007CF345 /* BlogEntry.swift in Sources */,
+				8384805127526CF9002137EA /* BlogEntry+CoreDataClass.swift in Sources */,
 				83372A5D273FF38B0015343B /* My_Daily_Blog.xcdatamodeld in Sources */,
+				8384805227526CF9002137EA /* BlogEntry+CoreDataProperties.swift in Sources */,
 				83372A53273FF38B0015343B /* AppDelegate.swift in Sources */,
 				83372A55273FF38B0015343B /* SceneDelegate.swift in Sources */,
 				83B6015E274286DF007CF345 /* BlogEntriesTableViewController.swift in Sources */,

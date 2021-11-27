@@ -14,6 +14,19 @@ class BlogEntriesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // this is called every time
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            if let dataFromCoreData = try? context.fetch(BlogEntry.fetchRequest()) as? [BlogEntry] {
+                
+                blogEntries = dataFromCoreData;
+                tableView.reloadData()
+            }
+            
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -31,9 +44,19 @@ class BlogEntriesTableViewController: UITableViewController {
         row.textLabel?.text = blogEntry.content
         return row
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let blogEntry = blogEntries[indexPath.row]
+        
+        performSegue(withIdentifier: "onEntrySegue", sender: blogEntry)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let entryViewController = segue.destination as? BlogEntryViewController {
-            entryViewController.entriesViewController = self;
+            
+            if let onEntrySubmit = sender as? BlogEntry {
+                entryViewController.blogEntry = onEntrySubmit
+            }
             
         }
     }

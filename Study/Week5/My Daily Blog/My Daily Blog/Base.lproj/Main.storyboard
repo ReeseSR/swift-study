@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" id="N0g-DX-SAP">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="MMF-xp-80b">
                             <connections>
-                                <segue destination="pe5-Hg-CS2" kind="show" id="mkk-1X-B0j"/>
+                                <segue destination="pe5-Hg-CS2" kind="show" identifier="onEntrySegue" id="mkk-1X-B0j"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -80,6 +80,9 @@
                     <navigationItem key="navigationItem" title="Blog App" id="LVg-Ce-tPc">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="trash" id="Ntv-nU-KvO">
                             <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="onDelete:" destination="pe5-Hg-CS2" id="gX4-Fc-Ljm"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

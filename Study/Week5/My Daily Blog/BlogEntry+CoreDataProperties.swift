@@ -22,5 +22,27 @@ extension BlogEntry {
 }
 
 extension BlogEntry : Identifiable {
+    func setMonth() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM"
+        if let dateToBeModified = date{
+            let month = dateFormatter.string(from: dateToBeModified)
+            return month.uppercased()
+        }
+        return ""
+    }
+    
+    func setDay() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd"
+        if let dateTobeModified = date{
+            let day = dateFormatter.string(from: dateTobeModified)
+            return day
+        }
+        return ""
+        
+    }
+    
+    
 
 }

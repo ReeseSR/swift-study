@@ -15,6 +15,7 @@
 		83372A62273FF38C0015343B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83372A60273FF38C0015343B /* LaunchScreen.storyboard */; };
 		83372A6D273FF38C0015343B /* My_Daily_BlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83372A6C273FF38C0015343B /* My_Daily_BlogTests.swift */; };
 		83372A78273FF38C0015343B /* My_Daily_BlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83372A77273FF38C0015343B /* My_Daily_BlogUITests.swift */; };
+		834E209127551FAA006A972B /* BlogEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E209027551FAA006A972B /* BlogEntryTableViewCell.swift */; };
 		8384805127526CF9002137EA /* BlogEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384804F27526CF9002137EA /* BlogEntry+CoreDataClass.swift */; };
 		8384805227526CF9002137EA /* BlogEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384805027526CF9002137EA /* BlogEntry+CoreDataProperties.swift */; };
 		83B6015E274286DF007CF345 /* BlogEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6015D274286DF007CF345 /* BlogEntriesTableViewController.swift */; };
@@ -53,6 +54,7 @@
 		83372A73273FF38C0015343B /* My Daily BlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Daily BlogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83372A77273FF38C0015343B /* My_Daily_BlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Daily_BlogUITests.swift; sourceTree = "<group>"; };
 		83372A79273FF38C0015343B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		834E209027551FAA006A972B /* BlogEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntryTableViewCell.swift; sourceTree = "<group>"; };
 		8384804F27526CF9002137EA /* BlogEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8384805027526CF9002137EA /* BlogEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		83B6015D274286DF007CF345 /* BlogEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntriesTableViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				83372A60273FF38C0015343B /* LaunchScreen.storyboard */,
 				83372A63273FF38C0015343B /* Info.plist */,
 				83372A5B273FF38B0015343B /* My_Daily_Blog.xcdatamodeld */,
+				834E209027551FAA006A972B /* BlogEntryTableViewCell.swift */,
 			);
 			path = "My Daily Blog";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				834E209127551FAA006A972B /* BlogEntryTableViewCell.swift in Sources */,
 				8384805127526CF9002137EA /* BlogEntry+CoreDataClass.swift in Sources */,
 				83372A5D273FF38B0015343B /* My_Daily_Blog.xcdatamodeld in Sources */,
 				8384805227526CF9002137EA /* BlogEntry+CoreDataProperties.swift in Sources */,

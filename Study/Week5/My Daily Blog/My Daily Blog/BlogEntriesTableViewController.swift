@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class BlogEntriesTableViewController: UITableViewController {
     
@@ -19,7 +20,10 @@ class BlogEntriesTableViewController: UITableViewController {
         // this is called every time
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             
-            if let dataFromCoreData = try? context.fetch(BlogEntry.fetchRequest()) as? [BlogEntry] {
+            let request: NSFetchRequest<BlogEntry> = BlogEntry.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+            
+            if let dataFromCoreData = try? context.fetch(request) as? [BlogEntry] {
                 
                 blogEntries = dataFromCoreData;
                 tableView.reloadData()
@@ -37,12 +41,19 @@ class BlogEntriesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = UITableViewCell();
+        if let row = tableView.dequeueReusableCell(withIdentifier: "entryRow") as? BlogEntryTableViewCell {
+            let blogEntry = blogEntries[indexPath.row]
+            row.entryContentLabel.text = blogEntry.content
+            row.monthTag.text = blogEntry.setMonth()
+            row.dayTag.text = blogEntry.setDay()
+            
+            // row.textLabel?.text = blogEntry.content
+            
+            return row
 
-        let blogEntry = blogEntries[indexPath.row];
-        
-        row.textLabel?.text = blogEntry.content
-        return row
+        } else {
+            return UITableViewCell()
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -51,6 +62,11 @@ class BlogEntriesTableViewController: UITableViewController {
         
         performSegue(withIdentifier: "onEntrySegue", sender: blogEntry)
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let entryViewController = segue.destination as? BlogEntryViewController {
             

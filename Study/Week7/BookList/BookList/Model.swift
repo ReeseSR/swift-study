@@ -9,16 +9,17 @@ import Foundation
 
 struct BooksData: Codable {
     let books: [Book]
+    
 }
 
 struct Book: Codable {
-    var title: String?
     var author: String?
-    var genre: String?
+    var title: String?
     var description: String?
-    var isbn: String?
+    var genre: String?
     var image: String?
+    var isbn: String?
     var published: String?
-    var pusblisher: String?
+    var publisher: String?
     
 }
